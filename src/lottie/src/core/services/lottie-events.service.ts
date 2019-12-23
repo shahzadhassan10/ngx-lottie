@@ -65,7 +65,7 @@ export class LottieEventsService implements OnDestroy {
   }
 
   private dispose(): void {
-    if (isPlatformServer(this.platformId)) {
+    if (isPlatformServer(this.platformId) || this.animationItem === null) {
       return;
     }
 
